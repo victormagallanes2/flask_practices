@@ -1,6 +1,9 @@
 from flask import Blueprint
+from flask_restx import Api
 
 
-authentication = Blueprint('authentication', __name__, url_prefix='/authentication')
+blueprint = Blueprint('authentication', __name__, url_prefix='/api/')
+api_authentication = Api(blueprint)
+
 from . import views
 

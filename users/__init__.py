@@ -1,6 +1,9 @@
 from flask import Blueprint
+from flask_restx import Api
 
 
-users = Blueprint('users', __name__, url_prefix='/users')
+blueprint = Blueprint('users', __name__, url_prefix='/api/')
+api_user = Api(blueprint)
+
 from . import views
 
